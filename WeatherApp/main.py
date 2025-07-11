@@ -1,6 +1,7 @@
 import requests
 from datetime import datetime
 
+# API key 
 API_KEY = "fe18de3cdfd0e199cb4312206981ff48"
 BASE_URL = "https://api.openweathermap.org/data/2.5/weather"
 
@@ -38,6 +39,8 @@ def get_weather(city):
     except KeyError as e:
         print(f"\nUnexpected data format: Missing {e}")
 
+
+# main calling
 if __name__ == "__main__":
     city = input("Enter city name: ")
     get_weather(city)
